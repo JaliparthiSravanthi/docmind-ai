@@ -1,0 +1,82 @@
+
+----- Page 1 -----
+Sravanthi Jaliparthi 
++91 8179783145 · jaliparthisravanthi553@gmail.com · LinkedIn · GitHub · LeetCode · Vijayawada, India 
+SKILLS SUMMARY 
+Languages: Python, Java, C (Basic), JavaScript, SQL 
+Web & Frameworks: Flask, HTML/CSS, MySQL 
+ML & Data: NumPy, Pandas, scikit-learn, Machine Learning Fundamentals, Data Structures & Algorithms 
+Tools & Platforms: Git/GitHub, VS Code, Anaconda, Jupyter Notebook 
+Soft Skills: Problem-Solving, Scalable System Design thinking, Team Collaboration, Adaptability 
+EDUCATION 
+B.Tech — Artificial Intelligence & Machine Learning 
+2024 – 2028 
+Kalasalingam Academy of Research and Education | GPA: 9.03 / 10.0 | Penultimate Year (2026) 
+Board of Intermediate Education — Narayana Junior College | 975 / 1000 2022 – 2024 
+WORK EXPERIENCE 
+Google Student Ambassador | Google 
+July 23, 2026 – Present 
+● 
+Serving as a campus representative for Google, promoting developer programs, tools, and events, and driving student 
+engagement with Google's technology ecosystem. 
+● 
+Organized and supported outreach initiatives to build awareness of Google developer resources within the student community, 
+strengthening peer-to-peer technical learning. 
+AI Developer Intern | Edulenza 
+May 2026 – August 2026 (Completed) 
+● 
+Architected AI-powered educational content templates in Python, producing structured, reusable lesson formats that scale 
+across the production platform — reducing manual content setup time significantly. 
+● 
+Built and integrated ML-driven features in a concurrent, multi-user production environment; collaborated on end-to-end 
+delivery cycles applying software design best practices for reliability and maintainability. 
+AI Web Developer Intern | InAmigos Foundation 
+May 17 – June 6, 2026 
+● 
+Designed and deployed a web application using HTML, CSS, and JavaScript within a 10-day sprint, implementing scalable 
+request-handling and reliable session management across multiple concurrent users. 
+● 
+Developed AI-powered web features end-to-end — from system design through testing and deployment — demonstrating 
+ability to own and ship features independently in a fast-paced environment. 
+PROJECTS 
+HerMarket — Women Entrepreneur E-Commerce Platform | Python, Flask, MySQL, HTML, CSS, JavaScript 
+● 
+Built a production-grade full-stack e-commerce platform end-to-end with 20+ implemented features across a distributed multi-
+role system — dual dashboards (Seller & Customer), role-based authentication, multi-stage order lifecycle, real-time inventory 
+management with stock reduction and out-of-stock protection, and persistent distributed session management via MySQL. 
+● 
+Engineered complete subsystems independently: Reviews & Ratings with duplicate prevention and average rating computation; 
+Cart, Wishlist, Checkout & Address Management; Seller Analytics, Order Status Updates, Category Filters, Product Search, 
+and Payment Method Display — delivering a scalable, concurrent multi-user shopping experience. 
+● 
+Applied modular system architecture (separation of concerns, role-based access control) across the entire stack — 
+demonstrating software design principles, data modelling, reliability engineering, and performance-conscious full-stack 
+development beyond the hackathon scope. 
+CampusGuard — Smart Campus Complaint Management System | Python, Flask, MySQL, HTML, CSS, JavaScript 
+● 
+Built a full-stack complaint management system with separate student and admin dashboards for complaint submission, real-
+time status tracking, duplicate detection, and follow-up management — demonstrating end-to-end system design with role-
+based access control. 
+● 
+Implemented concurrent multi-user support with reliable session handling, modular backend architecture using Flask and 
+MySQL, and a responsive frontend — applying software design principles across the entire stack. 
+ACHIEVEMENTS & ACTIVITIES 
+● 
+1st Prize — Algorithmist'26 Round 2 (GeeksforGeeks Campus Body, KARE) — top finish in competitive programming 
+contest testing algorithmic problem-solving and optimization under time constraints. 
+● 
+National-level hackathon participant — HERA HACKXX'26 at Sathyabama Institute; designed and shipped HerMarket end-to-
+end under pressure, demonstrating real-world engineering execution. 
+● 
+Participant — CHRONOVERSE'26 & VINTRA 2025 Hackathons (KARE ACM-W / KARE) — collaborated cross-
+functionally on time-critical engineering challenges, applying rapid prototyping and systems thinking. 
+● 
+150+ LeetCode problems solved (arrays, linked list, recursion, strings, sorting & searching) — consistent practice streak 
+demonstrating strong CS fundamentals and algorithmic depth. 
+CERTIFICATIONS 
+● 
+Python Programming — Code Tantra 
+● 
+Java (Basic) — HackerRank 
+● 
+Introduction to Generative AI — Simplilearn 
