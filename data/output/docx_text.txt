@@ -1,0 +1,390 @@
+AIM
+To study about the UML diagrams of Course Registration System.
+TOOLS REQUIRED
+PLANT UML
+STAR UML
+DRAW.IO
+UML DIAGRAMS
+USE CASE DIAGRAM
+A Use Case Diagram is a type of UML (Unified Modelling Language) diagram that
+visually represents the functional requirements of a system from the user’s perspective. A Use Case Diagram is a type of UML diagram used to describe the functional behaviour of a
+system from the user’s point of view.
+The UML use case diagram represents a College Registration System and provides a high-level view of how different users interact with the system. The main objective of this diagram is to
+identify the system’s functionalities and the external actors who use those functionalities. It helps stakeholders understand the scope of the system without focusing on internal technical details.
+The shaded rectangle in the diagram represents the system boundary, which encloses all the functionalities offered by the College Registration System. Anything inside this boundary is part of the system, while anything outside represents external users, known as actors. This clear separation shows what the system is responsible for and what lies beyond its control.
+COMPONENTS
+Actors (External Users)
+Use Cases (System Functionalities)
+System Boundary
+Relationships (Lines)
+Overall Interpretation
+Actors (External Users)
+Student
+Represents a learner who uses the system mainly for examination-related activities.
+Connected to limited use cases compared to the administrator. Administrator
+Represents the system manager or exam controller.
+Has access to most system functionalities for managing and controlling the examination process.
+Use Cases (System Functionalities)
+Student Registration
+Allows students to register themselves in the system.
+Used by both Student and Administrator. System Login
+Enables authorized users (students and administrators) to log into the system.
+Required before accessing other functionalities. Test
+Allows students to take online examinations.
+Managed and monitored by the administrator.
+System Boundary
+The rectangle in the centre represents the Online Examination System.
+All use cases (oval shapes) inside this boundary are functionalities provided by the system.
+Actors interact with the system only through these use cases.
+Relationships (Lines)
+Student → Use Cases
+Student interacts with:
+Student Registration
+System Login
+Test
+Administrator → Use Cases
+Administrator interacts with:
+Student Registration
+Manage Examination
+Manage Question Bank
+System Login
+Test
+Reports
+The connecting lines indicate which actor can perform which use case.
+Overall Interpretation
+The diagram shows role-based access:
+Students have limited access focused on taking exams.
+Administrators have full control over system configuration and management.
+The system is designed to:
+Register users
+Conduct exams
+Manage questions and exams
+Generate reports
+CLASS DIAGRAM
+A Class Diagram is a type of UML (Unified Modelling Language) diagram that shows the static structure of a system. It shows the system’s classes, their attributes (data members), methods (functions), and the relationships between classes. Each class is drawn as a rectangle divided into three seconds: class name, attributes , and operations.
+COMPONENTS
+Classes in the Diagram
+Relationships Between Classes
+Overall Interpretation
+Classes in the Diagram STUDENT
+The student class represents a general student in the system. Attributes:
+Registration Number: String
+Name: String Method:
+enrol ()
+UNDERGRADUATE STUDENT
+This class represents an undergraduate student and is a specialization of the student class.
+Method:
+enrol ()
+COURSE
+The course class represents a subject offered during a semester. Attributes:
+Course Title: String
+Course Code: String Methods:
+Register ()
+Drop ()
+Withdraw ()
+Pass ()
+Fail ()
+Result ()
+Relationships Between Classes
+Association (Enrolment Relationship)
+There is an association between the STUDENT and SEMESTER classes labelled ENROLLS. Multiplicity (* → 1) indicates that many students can enrol in one semester. The arrow direction shows that the STUDENT initiates the enrolment process into a SEMESTER.
+Inheritance (Generalization Relationship)
+The UNDERGRADUATE STUDENT class inherits from the STUDENT class. The POSTGRADUATE STUDENT class also inherits from the STUDENT class. This inheritance relationship indicates that both undergraduate and postgraduate students share the common attributes and methods defined in the STUDENT class.
+Aggregation (Whole–Part Relationship)
+There is an aggregation relationship between the SEMESTER and COURSE classes. The diamond symbol near the SEMESTER class shows that a semester consists of one or more courses. Courses can exist independently of a semester, which is why aggregation (and not composition) is used.
+Overall Interpretation
+The system models how students enrol in semesters
+A semester contains courses
+Students are categorized into undergraduate and postgraduate
+Courses manage academic outcomes like pass, fail, and results
+SEQUENCE DIAGRAM
+A Sequence Diagram is a type of UML interaction diagram that illustrates how objects or components communicate with each other over come to perform a specific task. It emphasizes the sequence of messages exchanged between actors and objects, showing the dynamic behaviour of the system.
+COMPONENTS
+Actors and Objects (Lifelines)
+Sequence of Interactions
+Additional Diagram Elements
+Actors and Objects (Lifelines)
+Student (Actor)
+Represents the user who wants to register for a course.
+Initiates the registration process.
+Registration Screen
+Acts as the user interface.
+Collects data from the student and submits it to the system.
+Registration Control
+Represents the control logic that handles registration requests.
+Coordinates between the user interface and course objects.
+Math 101
+Represents the course in which the student wants to enrol.
+Math 101: Section 1
+Represents a specific section of the Math 101 course.
+Handles seat availability and student addition.
+Sequence of Interactions
+Fill in Data
+The Student enters registration details on the Registration Screen.
+Submit
+The student submits the form through the Registration Screen.
+Add student to Math 101
+The Registration Screen sends the registration request to the Registration Control.
+Add Student
+The Registration Control forwards the request to the Math 101 course.
+Are you open?
+Math 101 checks with Math 101 : Section 1 to verify seat availability.
+Add student
+If seats are available, Math 101 : Section 1 adds the student to the section.
+Additional Diagram Elements
+Vertical dashed lines represent lifelines, showing the existence of each object over time.
+Rectangular bars on lifelines represent activation periods, indicating when an object is active.
+Horizontal arrows represent messages exchanged between objects, numbered to show execution order.
+COLLABORATION DIAGRAM
+In UML (Unified Modelling Language), a Collaboration Diagram is a type of Interaction Diagram that visualizes the interactions and relationships between objects in a system. It shows how objects collaborate to achieve a specific task or behaviour. The collaboration diagram illustrates how different entities interact within a Course Registration System to support academic and administrative activities. The system acts as a central hub that connects students, professors, administrators, the course catalo, and the database, ensuring smooth communication and coordination among all components.
+COMPONENTS
+External Entities
+Processes
+Data Stores
+Data Flows
+External Entities Student
+Interacts with the system to:
+Register for courses
+View courses
+Drop registered courses
+Professor
+Interacts with the system to:
+View enrolled students
+Submit grades
+Administrator
+Responsible for system administration.
+Stores and manages system data.
+Views enrolled students.
+Processes
+Course Registration System
+The central process of the diagram.
+Handles:
+Course registration and dropping
+Communication between students, professors, administrators, and the database
+Processing of course and enrolment data
+Data Stores Course CatLog
+Stores course-related information.
+Provides course data to:
+Students (for viewing available courses)
+Course Registration System
+Administrator (for maintenance)
+Database
+Stores:
+Student records
+Course registrations
+Grades and reports
+Supports:
+Managing courses
+Managing users
+Generating reports
+Data Flows
+Student ↔ Course CatLog
+Register and view courses
+Student ↔ Course Registration System
+Course registration and drop requests
+Course Registration System ↔ Professor
+Enrolment details
+Grade submission
+Administrator ↔ Course CatLog
+Provides and stores course data
+Administrator ↔ Database
+Views enrolled students
+Stores system data
+Course Registration System ↔ Database
+Stores and retrieves enrolment and course information
+STATE CHART DIAGRAM
+A state diagram is used to represent the condition of the system or part of the system at finite instances of time. It’s a behavioural diagram and it represents the behaviour using finite state transitions. The diagram shown is a UML State chart Diagram. It models the dynamic behaviour of a system by showing how the system moves from one state to another in response to events or actions. In this case, the diagram represents the course registration system workflow from login through enrolment, payment, and logout/shutdown.
+COMPONENTS
+Initial and Final States
+States in the Diagram
+Transitions (State Changes)
+Initial and Final States
+Initial State (User Login / Idle)
+Represented by a filled black circle.
+It indicates the starting point where the user is idle and initiates the login process.
+Final State (System Shutdown)
+Represented by a hollow circle.
+It indicates the termination of the system after the registration process is completed.
+States in the Diagram Authenticated
+The user successfully logs into the system.
+Acts as a central state from which multiple actions can be performed.
+Course Selection
+The user selects desired courses for registration.
+Browse Course / View Schedule
+Allows the user to browse available courses and view the schedule.
+Add / Drop Course
+Enables the user to add or remove courses from the selected list.
+Registration Complete
+Indicates successful completion of course selection and registration steps.
+Payment Processing
+The system processes the payment for registered courses.
+Payment Successful
+Payment has been completed successfully.
+Payment Failed
+Payment was unsuccessful.
+Enrolled
+The user is officially enrolled in the selected courses.
+Transitions (State Changes)
+Idle → Authenticated
+Triggered by user login.
+Authenticated → Course Selection
+User begins selecting courses.
+Authenticated → Browse Course / View Schedule
+User views available courses and schedules.
+Browse Course / View Schedule → Add / Drop Course
+User modifies course selection.
+Add / Drop Course → Registration Complete
+User finalizes course selection.
+Registration Complete → Payment Processing
+System initiates payment.
+Payment Processing → Payment Successful
+Payment is completed.
+Payment Processing → Payment Failed
+Payment fails.
+Payment Successful → Enrolled
+User is officially enrolled.
+Enrolled → System Shutdown
+System terminates the process.
+Log In / Log Out transitions
+Allow the user to enter or exit the system at different stages.
+ACTIVITY DIAGRAM
+In the Unified Modelling Language (UML), an Activity Diagram is a behavioural diagram that visualizes the step-by-step workflow of a system or process. It is essentially an advanced version of a flowchart that captures the dynamic flow of control and data between various actions, including support for parallel processes and complex decision logic. The diagram shown is a UML Activity Diagram, which is used to model the workflow or control flow of activities within a system. It focuses on what actions are performed, in what order, and under what conditions. In this case, the diagram represents the administrator side workflow of
+a Course Registration System, particularly emphasizing login, permission checking, and management functions.
+COMPONENTS
+Initial and Final Nodes
+Activities (Action States)
+Decision Nodes
+Control Flow
+Initial and Final Nodes
+Initial Node
+Represented by a filled black circle. It indicates the start of the workflow.
+Final Node
+Represented by a filled black circle at the end.
+It indicates the termination of the activity after logout.
+Activities (Action States)
+Login to Course Registration System
+The user logs into the system to begin the process.
+Check User Level and Permissions
+The system verifies the user’s role and access level.
+Manage Course
+Allows authorized users to manage course details.
+Manage Fees
+Allows management of fee-related information.
+Manage Syllabus
+Enables updating and maintaining course syllabi.
+Manage Students
+Allows management of student information.
+Manage Registration
+Enables handling of course registration processes.
+Logout from the System
+The user exits the system after completing tasks.
+Decision Nodes
+Multiple Check Permission decision nodes are shown.
+Each decision node verifies whether the user has permission to access a specific management function:
+Course
+Fees
+Syllabus
+Students
+Registration
+Control Flow
+After login and permission checking, the workflow branches into different paths based on user permissions.
+Authorized users can access one or more management activities.
+All management activities eventually converge at Logout from the System.
+The workflow then reaches the final node, ending the activity.
+COMPONENT DIAGARAM
+One kind of structural diagram in the Unified Modelling Language (UML) that shows how the components of a system are arranged and relate to one another is termed a component- based diagram, or simply a component diagram. The diagram shown is a UML component diagram (with some interaction aspects) that represents a course registration system from a student’s perspective. It illustrates the major system components, how they are connected, and how information flows between the user interface, processing components, and the database.
+COMPONENTS
+Actors
+Components in the System
+Interfaces and Connections
+System Boundary
+Actors Student User
+Represents the end user of the system.
+Interacts with different pages of the course registration system such as viewing courses, submitting registration forms, and making inquiries.
+Components in the System Registration File Print
+Responsible for generating and printing the registration details.
+Retrieves required information from the System Database.
+System Database
+Acts as the central data storage component.
+Stores course details, student information, and registration data.
+Supplies data to other components such as:
+Registration File Print
+List of Courses
+Course Registration Affirmation
+Course Registration Affirmation
+Confirms successful course registration.
+Communicates with the System Database to verify and store registration details.
+List of Courses
+Displays the list of available courses to the student.
+Retrieves course information from the System Database.
+Acts as an interface between the database and the student.
+Registration Form Page
+Allows the student to enter and submit course registration details.
+Sends registration data to the Course Registration Affirmation component.
+Inquiries Page
+Handles student inquiries related to courses or registration.
+Allows the student to request information from the system.
+Interfaces and Connections
+Ports and interfaces (shown as small circles and connectors) indicate communication points between components.
+Solid lines represent direct interaction or data flow.
+Dashed lines represent dependency relationships between components.
+The System Database acts as the backbone, connecting multiple components and ensuring data consistency.
+System Boundary
+The outer rectangle represents the Course Registration System boundary.
+All internal components operate within this boundary.
+The Student User interacts with the system from outside the boundary.
+DEPLOYMENT DIAGRAM
+Deployment Diagrams are used to represent system hardware and its software. It tells us what hardware components exist and what software components run on them. A UML Deployment Diagram models the physical deployment of software artifacts on hardware nodes and shows how these nodes communicate at runtime. In the context of the given diagram, the deployment view illustrates how a three-tier application is physically distributed across different machines.
+COMPONENTS
+Client
+Server
+Database
+Communication Links
+Client
+Represents the user-side environment.
+Contains the Browser component.
+The browser is used by the user to access the application and send requests to the server.
+Server
+Represents the application server.
+Contains the Application component.
+The application processes requests received from the client browser, applies business logic, and communicates with the database.
+Database
+Represents the data storage server.
+Contains the MySQL component.
+MySQL is responsible for storing and retrieving application data.
+Communication Links
+An arrow from Client to Server shows that requests are sent from the browser to the application.
+An arrow from Server to Database indicates that the application interacts with the database to store or fetch data.
+PACKAGE DIAGRAM
+A package diagram is a type of structural diagram in UML (Unified Modelling Language) that organizes and groups related classes and components into packages. It visually represents the dependencies and relationships between these packages, helping to illustrate how different parts of a system interact with each other. This UML diagram represents a Package Diagram for a university or educational management system. It illustrates the high-level logical architecture of the system by grouping related elements into three primary modules: User Management, Course CatLog, and Enrolment Management. The diagram focuses on how these major subsystems interact and the specific components they contain.
+COMPONENTS
+Packages (Modules)
+Relationships Between Packages
+Packages (Modules) User Management
+This package handles user-related information and roles in the system. Components inside User Management:
+Student – Represents students using the system.
+Instructor – Represents instructors involved in teaching courses.
+Admin – Represents administrators who manage the system.
+Course CatLog
+This package manages course-related information. Components inside Course CatLog:
+Course – Stores course details.
+Selection – Handles course selection by users.
+Schedule – Manages course schedules.
+Enrolment Management
+This package manages the enrolment lifecycle. Components inside Enrolment Management:
+Registration – Handles student course registration.
+Waitlist – Manages students waiting for course availability.
+Grading – Handles grading for enrolled students.
+Relationships Between Packages
+User Management → Course CatLog
+Relationship labelled «accesses»
+Indicates that users (students, instructors, admins) access course information from the Course CatLog.
+Course CatLog → Enrolment Management
+Relationship labelled «uses»
+Indicates that the Course CatLog uses enrolment services such as registration and waitlisting.
+Enrolment Management → Course CatLog
+Relationship labelled «manages»
+Indicates that enrolment processes manage or update course-related information such as availability and enrolment status.
+RUBRICS
+RESULT
+Thus, all the UML Diagrams for course registration system were learned successfully.
