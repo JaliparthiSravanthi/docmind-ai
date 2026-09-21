@@ -11,10 +11,11 @@ with open("data/output/vector_store.pkl", "rb") as file:
 
 # Create FAISS index
 dimension = embeddings.shape[1]
-index = faiss.IndexFlatL2(dimension)
+embeddings = embeddings.astype("float32")
+faiss.normalize_L2(embeddings)
 
-# Add embeddings
-index.add(embeddings.astype("float32"))
+index = faiss.IndexFlatIP(dimension)
+index.add(embeddings)
 
 # Save index
 faiss.write_index(index, "data/output/faiss_index.index")
